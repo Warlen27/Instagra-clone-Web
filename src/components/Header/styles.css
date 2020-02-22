@@ -1,0 +1,53 @@
+header#main-header{
+    background: #ffff;
+    height: 72px;
+    border-bottom: 1px solid #ddd;
+}
+
+header#main-header .header-content{
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    height: 72px;
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header#main-header .header-content .left-content  {
+    height: 36px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header#main-header .header-content .left-content #logo2 {
+      height: 29px;
+      width: 103px;
+  }
+  
+
+header#main-header .header-content .left-content .separator {
+    width: 1px;
+    background: black;
+    margin: 0 16px;
+    height: 28px;
+
+
+}
+
+header#main-header .header-content .height-content  {
+    height: 36px;
+    width: 80px;
+    width: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+

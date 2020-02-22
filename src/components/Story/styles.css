@@ -1,0 +1,31 @@
+section#story {
+    padding:  10px ;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+section#story  #wrapper-image {
+    width: 66px;
+    height: 66px;
+    border-radius: 66px;
+    border: 2px solid crimson;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7px;
+
+    
+}
+
+section#story img {
+    width: 58px;
+    height: 58px;
+    border-radius: 58px;
+    border: transparent;
+}

@@ -1,0 +1,208 @@
+section#container {
+    width: 100%;
+    max-width: 800px;
+    height: 100vh;
+    margin: 0 auto;
+  
+
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section#container div.header-content{
+    height: 50vh;
+    margin-top: 50px;
+   
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 3fr  repeat(6, 1fr 20px);
+	grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+   "avatar avatar .  username EditePerfil"
+   "avatar avatar .  content-pff content-pff "
+   "avatar avatar .  nome .";
+}
+
+section#container div.header-content .avatar {
+    grid-area: avatar;
+    padding: .5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section#container div.header-content .avatar span {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+section#container div.header-content .avatar span img {
+    height: 90%;
+    border-radius: 90%; 
+    border: 3px solid #fff;
+}
+
+section#container div.header-content span.username {
+    grid-area: username;
+    font-size: 28px;
+    color: #262626;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section#container div.header-content .btn-profile {
+    grid-area: EditePerfil;
+    grid-column: 6/10;
+   
+    display: flex;
+    align-items: center;
+}
+
+section#container div.header-content .btn-profile button {
+    background: transparent;
+    border:1px solid #dbdbdb;
+    border-radius: 4px;
+    color: #262626;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 7px 9px;
+}    
+
+section#container div.header-content .content-pff {
+    width: 400px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-area: content-pff; 
+    font-size: 18px;
+}
+
+.count-publication, .count-followers, .count-following   {
+    font-weight: bold;
+    margin-right: 5px; 
+}
+
+section#container div.header-content .name {
+    font-weight: bold;
+    font-size: 20px;
+    grid-area: nome;
+    grid-column: 4/5;
+}
+
+section#container .footer-content{
+    background: #222;
+    height: 50%;
+}
+
+@media (max-width: 735px) {
+
+    section#container div.header-content{
+        grid-template-columns: 20vw repeat(2, 35vw auto);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+       "avatar username "
+       "avatar EditePerfil "
+       "nome ."
+       "content-pff content-pff";
+    }
+
+    section#container div.header-content .name {
+        grid-area: nome;
+        font-size: 14px;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    section#container div.header-content .btn-profile{
+        grid-area: EditePerfil;
+        grid-column: 2/5;
+        align-self: start;
+    }
+
+    section#container div.header-content .btn-profile button{
+        width: 100%;
+    }
+
+    section#container div.header-content .avatar {
+        width: 20vw;
+        height: 20vw;
+    }
+
+    section#container div.header-content .avatar span  {
+        width: 100%;
+        height: 100%;
+    }
+
+    section#container div.header-content .avatar span img {
+        width: 100%;
+        height: 100%;
+    }
+
+    section#container div.header-content span.username {
+        font-size: 5vw;
+        height: 32px;
+        align-self: end;
+       
+    }
+    section#container div.header-content .content-pff {
+      width: 100vw;
+      justify-content: space-around;
+       
+    }
+
+    .p, .f1, .f2 {
+        display: flex;
+        flex-direction: column;
+       align-items: center; 
+    }
+
+    .count-publication, .publications,
+    .count-followers, .followers, 
+    .count-following, .following {
+        font-size: 80.4%;
+    }
+
+}
+
+@media (max-width: 590px) {
+    /*section#container div.header-content{
+        grid-template-columns: 20vw repeat(2, 30vw auto);
+    }*/
+    /*section#container div.header-content span.username {
+        margin-left: 19px;
+    }*/
+}
+
+@media (max-width: 534px) {
+   /* section#container div.header-content{
+        grid-template-columns: 20vw repeat(2, 25vw auto);
+    }*/
+
+    section#container div.header-content span.username {
+        font-size: 4vw;
+        align-self: end;
+    }
+
+    section#container div.header-content .avatar  {
+       align-self: center;
+    }
+
+    section#container div.header-content .name {
+        width: 21vw;
+    }
+}
+
+@media (max-width: 375px) {
+   
+
+    section#container div.header-content .name {
+        width: 30vw;
+    }
+}
+
+
