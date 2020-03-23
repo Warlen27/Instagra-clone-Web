@@ -1,5 +1,4 @@
-# Instagra Clone feito em Reactjs
-
+# Instagram feito em ReactJS
 ![instagram1](https://user-images.githubusercontent.com/55707579/75097475-eb03d980-5589-11ea-87ec-a92f8b0f4e05.png)
 
 ![instagram2](https://user-images.githubusercontent.com/55707579/75097478-f48d4180-5589-11ea-992b-8820f0eb5167.png)
