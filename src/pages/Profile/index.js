@@ -7,21 +7,25 @@ import Header from '../../components/Header';
 export default function Profile() {
 
   const [profile, setProfile] = useState('');
+  const [posts, setPosts] = useState([]);
   
-  const _id = localStorage.getItem('userId');
+  const id = localStorage.getItem('userId');
 
   useEffect(() => {
     async function loadProfile() {
   
-      const response = await api.get(`/users/${_id}`);
+      const response = await api.get(`/users/${id}`);
       
     
       setProfile(response.data);
+      setPosts(response.data.posts)
+      //console.log(response.data)
+      console.log(response.data.posts)
          
     }
     
      loadProfile();
-  },);
+  }, []);
  
 
   return (
@@ -56,7 +60,15 @@ export default function Profile() {
         <span className="name">{profile.name}</span>
            
         </div>
-        <div className="footer-content"></div>
+       
+        <ul className="posts">  
+          {posts.map(post => (
+            <li key={post._id}>
+              <img src={post.thumbnail_url} alt={post.thumbnail_url} />
+             
+            </li>
+          ))}
+        </ul> 
       </section>
     </>
   );
