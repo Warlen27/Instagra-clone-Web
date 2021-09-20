@@ -1,22 +1,23 @@
-form#new-post {
-    width: 100%;
+import styled from 'styled-components';
+
+export const Form = styled.form`
+   width: 100%;
     max-width: 900px;
     margin: 0px auto 0;
     background: #fff;
     border:1px solid #ddd; 
-}
+`;
 
-form#new-post article.header {
-        height: 60px;
-        border-bottom: #ddd 2px solid;
-        padding: 10px;
+export const HeaderStyle = styled.header`
+   height: 60px;
+   border-bottom: #ddd 2px solid;
+   padding: 10px;
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-}
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 
-form#new-post article.header button {
+   button {
     background: transparent;
     border: 0;
     cursor: pointer;
@@ -24,24 +25,18 @@ form#new-post article.header button {
     font-weight: 600;
     color: #3897f0;
 }
+`;
 
-form#new-post article.footer {
-        height: 90px;
-        padding: 10px;
+export const Footer = styled.footer`
+    height: 90px;
+    padding: 10px;
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-}
-
-form#new-post article.footer  {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-}
 
-
-form#new-post article.footer > img {
+    > img {
     width: 35px;
     height: 35px;
     margin-right: 10px;
@@ -51,7 +46,7 @@ form#new-post article.footer > img {
     background: black;
 }
 
-form#new-post article.footer  textarea {
+textarea {
     height: 45px;
     width: 100%;
     border: none;
@@ -64,9 +59,17 @@ form#new-post article.footer  textarea {
     overflow-wrap: break-word;
     resize: none;
 }
+`;
 
-form div#content-label label#thumbnail{
-    width: 80px;
+
+export const ContainerLabel = styled.section`
+   input[type=file] {
+    display: none;
+}
+`;
+
+export const Thumbnail = styled.label`
+   width: 80px;
     height: 80px;
     background-size:cover;
     cursor: pointer;
@@ -74,12 +77,9 @@ form div#content-label label#thumbnail{
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-form div#content-label input[type=file] {
+    .placeholder img {
     display: none;
-}
+    }
+`;
 
-form div#content-label label.placeholder img {
-    display: none;
-}
