@@ -1,10 +1,12 @@
-header#main-header{
-    background: #ffff;
+import styled from 'styled-components';
+
+export const Container = styled.header`
+   background: #ffff;
     height: 72px;
     border-bottom: 1px solid #ddd;
-}
+`;
 
-header#main-header .header-content{
+export const HeaderContent = styled.section`
     width: 100%;
     max-width: 980px;
     margin: 0 auto;
@@ -14,33 +16,29 @@ header#main-header .header-content{
     display: flex;
     align-items: center;
     justify-content: space-between;
+`;
 
-}
-
-header#main-header .header-content .left-content  {
+export const LeftContent = styled.article`
     height: 36px;
 
     display: flex;
     flex-direction: row;
     align-items: center;
-}
 
-header#main-header .header-content .left-content #logo2 {
-      height: 29px;
-      width: 103px;
-  }
-  
+    #logo2 {
+    height: 29px;
+    width: 103px;
+    }
+`;
 
-header#main-header .header-content .left-content .separator {
+export const Separator = styled.div`
     width: 1px;
-    background: black;
+    background: #000;
     margin: 0 16px;
     height: 28px;
+`;
 
-
-}
-
-header#main-header .header-content .height-content  {
+export const HeightContent = styled.article`
     height: 36px;
     width: 80px;
     width: 80px;
@@ -48,6 +46,6 @@ header#main-header .header-content .height-content  {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    
-}
+`;
+
 
